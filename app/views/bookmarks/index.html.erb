@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-sm-4">
+    <% @bookmarks.each do |bookmark| %>
+      <h3><%= bookmark.title %></h3>
+      <p><%= bookmark.body %></p>
+      <a href="<%= bookmark.img_url %>" target="_blank"><%= bookmark.img_url %></a>
+      <br> 
+      <br>
+      <%= link_to 'Edit', edit_bookmark_path(bookmark), class: 'btn btn-warning' %>
+      <%= link_to 'Delete', bookmark_path(bookmark), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-danger' %> 
+      <hr>
+    <% end %>
+  </div>
+  <div class="col-sm-8">
+    <img class="img-responsive" src="https://images.unsplash.com/photo-1511434139893-de3e59cdeee5?auto=format&fit=crop&w=1351&q=80" alt="">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <img class="img-responsive" src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=750&q=80" alt="">
+  </div>
+</div>
